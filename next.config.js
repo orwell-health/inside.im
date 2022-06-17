@@ -5,6 +5,9 @@ const nextConfig = {
     loader: 'akamai',
     path: '/',
   },
+  // experimental: {
+  //   outputStandalone: true,
+  // },
   env: {
     REACT_APP_API_SERVER_HOST: 'https://dev-api.priv-inside.im',
     REACT_APP_API_KEY:
