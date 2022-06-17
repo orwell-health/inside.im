@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    loader: 'akamai',
+    path: '/',
+  },
   env: {
     REACT_APP_API_SERVER_HOST: 'https://dev-api.priv-inside.im',
     REACT_APP_API_KEY:
