@@ -14,7 +14,7 @@ import { HomepageContext } from '../components/homepageContext';
 export default function B2BProvider() {
   const context = useContext(HomepageContext);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 960) {
         console.log('wide');

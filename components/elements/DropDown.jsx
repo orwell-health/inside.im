@@ -72,7 +72,7 @@ export function DropDown(props) {
             <path
               d="M1 1L6 6L11 1"
               stroke="#26282C"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
