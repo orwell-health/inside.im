@@ -13,15 +13,15 @@ const nextConfig = {
     REACT_APP_API_KEY:
       '3fa3c760748a906079d0ac30fa13853f692bd9d1e4c4b225435dc438e570dc0a',
   },
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/main',
-        permanent: true,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/main',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;
