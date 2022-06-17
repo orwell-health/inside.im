@@ -15,14 +15,16 @@ import Footer from '../components/component/Footer';
 import { HomepageContext } from '../components/homepageContext';
 
 function B2BMain() {
-  const [isFontBLLoaded, setIsFontBLLoaded] = useState(false);
-  const [isFontBLoaded, setIsFontBLoaded] = useState(false);
-
-  const [isFontMLoaded, setIsFontMLoaded] = useState(false);
-  const [isFontRLoaded, setIsFontRLoaded] = useState(false);
-
   const context = useContext(HomepageContext);
-  useLayoutEffect(() => {
+  useEffect(() => {
+    if (window.innerWidth >= 960) {
+      context.setIsWide(true);
+    } else {
+      context.setIsWide(false);
+    }
+  }, []);
+
+  useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 960) {
         context.setIsWide(true);
@@ -34,13 +36,8 @@ function B2BMain() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  useEffect(() => {
-    // window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div className={`w-screen font-notosans relative`}>
-      {/* isFontBLLoaded && isFontBLoaded && isFontMLoaded && isFontRLoaded */}
       <div className="fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50 ">
         <Header target={'main'} />
       </div>

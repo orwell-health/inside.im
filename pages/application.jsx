@@ -10,26 +10,11 @@ import Submitted from '../components/application/Submitted';
 import { useRouter } from 'next/router';
 
 export default function B2BApplication() {
-  // const { from } = useParams();
   const router = useRouter();
   const from = router.query.target;
   console.log(from);
 
   const context = useContext(HomepageContext);
-
-  useLayoutEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 960) {
-        console.log('wide');
-        context.setIsWide(true);
-      } else {
-        console.log('small');
-        context.setIsWide(false);
-      }
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);

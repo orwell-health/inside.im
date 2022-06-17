@@ -23,7 +23,14 @@ export default function Submitted(props) {
           ]}
         </div>
         <Link href={from === 'service' ? '/provider' : '/main'}>
-          <a>
+          <a
+          // onClick={() => {
+          //   console.log('홈으로 가기');
+          //   setTimeout(() => {
+          //     context.setSubmitted(false);
+          //   }, 1000);
+          // }}
+          >
             <Button
               text={'홈으로 가기'}
               style={{
@@ -33,6 +40,7 @@ export default function Submitted(props) {
                 color: '#26282C',
               }}
               click={() => {
+                console.log('홈으로 가기');
                 setTimeout(() => {
                   context.setSubmitted(false);
                 }, 1000);

@@ -1,38 +1,29 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useContext } from 'react';
 import SNSLink from './SNSLink';
+import { HomepageContext } from '../homepageContext';
 
 function Footer(props) {
-  const [isWide, setIsWide] = useState(false);
+  const context = useContext(HomepageContext);
+  const [footerText, setFooterText] = useState('');
+
   useEffect(() => {
-    setIsWide(window.innerWidth >= 960 ? true : false);
+    setFooterText([
+      '(주) 오웰헬스',
+      <br />,
+      '대표 홍승주   사업자등록번호 378-86-02282',
+      <br />,
+      '통신판매업신고 제 2022-서울강남-02138 호',
+      <br />,
+      '서울특별시 강남구 테헤란로 151, 3층 301호 (역삼동, 역삼 하이츠 빌딩)',
+      <br />,
+      'admin@orwellhealth.org  /  070-7954-3518',
+    ]);
   }, []);
-  useLayoutEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 960) {
-        setIsWide(true);
-      } else {
-        setIsWide(false);
-      }
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+
   return (
     <div className="w-screen bg-black px-[24px] wide:px-[100px] pt-[40px] pb-[50px] wide:py-[70px] wide:flex wide:justify-between">
       <div className="text-[12px] wide:text-[15px] leading-[16.8px] wide:leading-[21px] text-white font-normal mb-[40px] wide:mb-0">
-        <div>
-          {[
-            '(주) 오웰헬스',
-            <br />,
-            '대표 홍승주   사업자등록번호 378-86-02282',
-            <br />,
-            '통신판매업신고 제 2022-서울강남-02138 호',
-            <br />,
-            '서울특별시 강남구 테헤란로 151, 3층 301호 (역삼동, 역삼 하이츠 빌딩)',
-            <br />,
-            'admin@orwellhealth.org  /  070-7954-3518',
-          ]}
-        </div>
+        <div>{footerText}</div>
         <div className="flex items-center mt-[20px]  text-white cursor-pointer">
           <div
             onClick={() =>
@@ -59,7 +50,7 @@ function Footer(props) {
       </div>
       <div className="flex flex-col items-start wide:items-end wide:justify-between">
         <div className=" mb-[20px] wide:mb-0">
-          {isWide && (
+          {context.isWide && (
             <svg
               width="88"
               height="25"
@@ -75,7 +66,7 @@ function Footer(props) {
               />
             </svg>
           )}
-          {!isWide && (
+          {!context.isWide && (
             <svg
               width="71"
               height="21"

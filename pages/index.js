@@ -6,9 +6,9 @@ import Link from 'next/link';
 import Router from 'next/router';
 
 export default function Home() {
-  useEffect(() => {
-    Router.push('/main');
-  }, []);
+  // useEffect(() => {
+  //   Router.push('/main');
+  // }, []);
   return (
     <div className={styles.container}>
       {/* Read{' '}

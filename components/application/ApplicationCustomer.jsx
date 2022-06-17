@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useRef,
-  useEffect,
-  useContext,
-  useCallback,
-} from 'react';
+import React, { useState, useContext, useCallback } from 'react';
 
 import { HomepageContext } from '../homepageContext';
 import { Input } from '../elements/Input';
@@ -13,6 +7,7 @@ import { Button } from '../elements/Button';
 import { MultilineInput } from '../elements/MultilineInput';
 import PersonalInfoProtection from '../component/PersonalInfoProtection';
 import axios from '../../utils/axios';
+import webviewToast from '../elements/webviewToast';
 
 export default function ApplicationCustomer(props) {
   const { type } = props;
@@ -107,6 +102,7 @@ export default function ApplicationCustomer(props) {
             : customerData['기타 문의'],
         questionType: customerData['문의 유형'],
       });
+      webviewToast('서버 제출 전');
       const response = await axios.post(`/web/v2/question/submit`, jsonData, {
         headers: {
           'X-App-Id': 'w:123',
@@ -114,7 +110,9 @@ export default function ApplicationCustomer(props) {
         },
       });
       console.log('RESPONSE----------------', response);
+
       if (response.data.code === 0) {
+        webviewToast('제출 완료');
         console.log('제출 완료', response.data);
         context.setSubmitted(true);
       } else {
@@ -122,6 +120,7 @@ export default function ApplicationCustomer(props) {
         console.log('issue 안돼!: ', result);
       }
     } catch (error) {
+      webviewToast(error);
       console.error('result', error);
     }
   }, [customerData, updateErrorMessage]);
@@ -215,7 +214,6 @@ export default function ApplicationCustomer(props) {
       }
     } else {
       console.log('제출');
-
       realSubmit();
     }
   }
