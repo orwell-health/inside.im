@@ -112,7 +112,7 @@ function B2BMain() {
 
   return (
     <div className={`w-screen font-notosans relative`}>
-      <div className="fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50 ">
+      {/* <div className="fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50 ">
         <Header target={'main'} />
       </div>
       <Part1 />
@@ -123,7 +123,7 @@ function B2BMain() {
       <Part7 /> <Part8 />
       <Part9 />
       <Part10 />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
