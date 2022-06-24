@@ -102,12 +102,12 @@ export default function ApplicationCustomer(props) {
             : customerData['기타 문의'],
         questionType: customerData['문의 유형'],
       });
-      webviewToast('서버 제출 전');
+      // webviewToast('서버 제출 전');
       const response = await axios.post(`/web/v2/question/submit`, jsonData);
       console.log('RESPONSE----------------', response);
 
       if (response.data.code === 0) {
-        webviewToast('제출 완료');
+        // webviewToast('제출 완료');
         console.log('제출 완료', response.data);
         context.setSubmitted(true);
       } else {
@@ -115,7 +115,7 @@ export default function ApplicationCustomer(props) {
         console.log('issue 안돼!: ', result);
       }
     } catch (error) {
-      webviewToast(error);
+      // webviewToast(error);
       console.error('result', error);
     }
   }, [customerData, updateErrorMessage]);
