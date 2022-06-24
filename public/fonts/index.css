@@ -38,7 +38,7 @@
     url('./NotoSansKR-Black.otf') format('truetype');
 } */
 
-@font-face {
+/* @font-face {
   font-family: 'NotoSansKR';
   font-style: normal;
   font-weight: 300;
@@ -96,7 +96,7 @@
       format('woff'),
     url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf)
       format('opentype');
-}
+} */
 
 /* html {
   height: '100%';
