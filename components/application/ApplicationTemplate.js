@@ -18,7 +18,7 @@ export default function ApplicationTemplate(props) {
         {from === 'customer' && (
           <ApplicationCustomer type={'프로그램 참여요청'} />
         )}
-        {from === 'service' && (
+        {from.includes('service') && (
           <ApplicationCustomer type={'서비스 관련 문의'} />
         )}
       </div>
