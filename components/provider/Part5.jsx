@@ -24,7 +24,7 @@ export default function Part5() {
             className="w-full object-fit my-auto"
             alt="empty"
           /> */}
-          <Image src={homepageProvider_part5} />
+          <Image src={homepageProvider_part5} placeholder="blur" />
         </div>
       </div>
       <div className="w-full h-full absolute top-0 left-0 bg-black opacity-50 " />

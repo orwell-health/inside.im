@@ -23,7 +23,7 @@ function Part8() {
             className="w-full object-fit my-auto"
             alt="empty"
           /> */}
-          <Image src={part8_1} />
+          <Image src={part8_1} placeholder="blur" />
         </div>
       </div>
       <div className="w-full h-full absolute top-0 left-0 bg-black opacity-50 " />
