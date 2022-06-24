@@ -2,8 +2,7 @@
 const nextConfig = {
   // reactStrictMode: true,
   images: {
-    loader: 'imgix',
-    //akamai
+    loader: 'akamai',
     path: '/',
   },
   // experimental: {
