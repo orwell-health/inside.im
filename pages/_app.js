@@ -1,6 +1,6 @@
 import { HomepageProvider } from '../components/homepageContext';
-import '../styles/globals.css';
 import { ToastContainer } from 'react-toastify';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (

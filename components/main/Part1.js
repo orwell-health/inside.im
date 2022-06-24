@@ -55,11 +55,9 @@ function Part1() {
     >
       <motion.div style={{ y: -(scrollAmount * 3) / 8 }}>
         <div className="absolute w-full h-full top-0 left-[50%] translate-x-[-50%] min-w-[960px] wide:left-0 wide:translate-x-[0%] ">
-          {context.isWide && (
-            <Image src={homepage_main} priority placeholder="blur" />
-          )}
+          {context.isWide && <Image src={homepage_main} placeholder="blur" />}
           {!context.isWide && (
-            <Image src={homepage_main_small} priority placeholder="blur" />
+            <Image src={homepage_main_small} placeholder="blur" />
           )}
         </div>
       </motion.div>

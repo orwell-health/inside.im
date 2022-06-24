@@ -23,14 +23,7 @@ export default function Submitted(props) {
           ]}
         </div>
         <Link href={from === 'service_provider' ? '/provider' : '/main'}>
-          <a
-          // onClick={() => {
-          //   console.log('홈으로 가기');
-          //   setTimeout(() => {
-          //     context.setSubmitted(false);
-          //   }, 1000);
-          // }}
-          >
+          <a>
             <Button
               text={'홈으로 가기'}
               style={{
