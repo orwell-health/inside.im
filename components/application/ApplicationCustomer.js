@@ -103,12 +103,7 @@ export default function ApplicationCustomer(props) {
         questionType: customerData['문의 유형'],
       });
       webviewToast('서버 제출 전');
-      const response = await axios.post(`/web/v2/question/submit`, jsonData, {
-        headers: {
-          'X-App-Id': 'w:123',
-          'Content-Type': `application/json`,
-        },
-      });
+      const response = await axios.post(`/web/v2/question/submit`, jsonData);
       console.log('RESPONSE----------------', response);
 
       if (response.data.code === 0) {

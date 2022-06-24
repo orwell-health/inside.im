@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 function Header(props) {
   const { target } = props;
+
   const [whiteBackground, setWhiteBackground] = useState(false);
 
   const { scrollY } = useViewportScroll();
@@ -104,7 +105,7 @@ function Header(props) {
               </div> */}
             </div>
             <div className="pt-[24px] shrink-0">
-              <Link href="/application?target=service">
+              <Link href={`/application?target=service_${target}`}>
                 <div
                   className={` text-[17px] leading-[24.62px] text-white font-bold h-[48px] px-[40px] py-[10px]  rounded-[12px] bg-black cursor-pointer`}
                 >
@@ -157,7 +158,7 @@ function Header(props) {
               </div>
             </Link>
             <div className="py-[12px] flex items-center ">
-              <Link href="/application?target=service">
+              <Link href={`/application?target=service_${target}`}>
                 <div className=" pt-[6px] pb-[8px] px-[12px] bg-[#26282C] rounded-[8px] text-[14px] text-white mr-[23px] cursor-pointer">
                   문의하기
                 </div>

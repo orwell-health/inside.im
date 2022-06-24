@@ -98,7 +98,7 @@
       format('opentype');
 }
 
-html {
+/* html {
   height: '100%';
 }
 
@@ -115,6 +115,5 @@ body {
 }
 
 code {
-  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; */
   font-family: 'Noto Sans KR', sans-serif;
-}
+} */
