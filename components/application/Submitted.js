@@ -22,7 +22,7 @@ export default function Submitted(props) {
             '이외 문의사항은 registration@orwellhealth.org로 연락 바랍니다.',
           ]}
         </div>
-        <Link href={from.includes('provider') ? '/provider' : '/main'}>
+        <Link href={from === 'service_provider' ? '/provider' : '/main'}>
           <a
           // onClick={() => {
           //   console.log('홈으로 가기');
