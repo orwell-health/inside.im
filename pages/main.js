@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import Header from '../components/component/Header';
 import Part1 from '../components/main/Part1';
 import Part2 from '../components/main/Part2';

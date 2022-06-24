@@ -12,7 +12,7 @@ export default function QnAItem(props) {
   const titleRef = useRef();
 
   useEffect(() => {
-    console.log('DAfv', 37 + 41 + titleRef.current.offsetHeight);
+    // console.log('height', 37 + 41 + titleRef.current.offsetHeight);
     setTimeout(() => {
       setLoaded(true);
     }, 100);

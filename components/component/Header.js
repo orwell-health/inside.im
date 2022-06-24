@@ -17,7 +17,7 @@ function Header(props) {
 
   useEffect(() => {
     scrollY.onChange((v) => {
-      console.log('scrollTop:', v, 'scrollBottom', v + window.innerHeight);
+      // console.log('scrollTop:', v, 'scrollBottom', v + window.innerHeight);
       if (v >= 100) {
         setWhiteBackground(true);
       } else {
