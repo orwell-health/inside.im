@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import Head from 'next/head';
+import Head from 'next/document';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
