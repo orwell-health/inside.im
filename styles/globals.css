@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
-
 @font-face {
   font-family: 'NotoSansKR';
   font-style: normal;
@@ -89,4 +87,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+div#counselorSlider
+  > div.slick-slider.slick-initialized
+  > button.slick-arrow::before {
+  display: none;
 }

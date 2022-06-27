@@ -75,7 +75,7 @@ function Part5() {
     infinite: true,
     slidesToShow: 3,
     variableWidth: true,
-    // centerMode: true,
+    centerMode: true,
     adaptiveHeight: true,
     swipeToSlide: true,
     pauseOnFocus: false,
@@ -112,7 +112,10 @@ function Part5() {
         >
           <div className="relative h-[313px] wide:h-[600px]">
             {/* 38+25+250 */}
-            <div className="w-[570px] wide:w-[1140px] absolute left-[50%] translate-x-[-50%]">
+            <div
+              className="w-[570px] wide:w-[1140px] absolute left-[50%] translate-x-[-50%]"
+              id="counselorSlider"
+            >
               <Slider {...settings}>
                 {counselors.map((counselor, index) => (
                   <div className="pt-[38px] pb-[25px]  wide:py-[50px] px-[7.5px] wide:px-[15px] ">
