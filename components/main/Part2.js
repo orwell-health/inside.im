@@ -34,11 +34,14 @@ function Part2Test() {
           pageRef.current.offsetTop + row3Ref.current.offsetTop
         ) {
           setRow3Show(true);
+          setRow2Show(true);
+          setRow1Show(true);
         } else if (
           v + window.innerHeight >
           pageRef.current.offsetTop + row2Ref.current.offsetTop
         ) {
           setRow2Show(true);
+          setRow1Show(true);
         } else if (
           v + window.innerHeight >
           pageRef.current.offsetTop + row1Ref.current.offsetTop

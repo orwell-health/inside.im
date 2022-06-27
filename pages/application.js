@@ -12,7 +12,6 @@ import { useRouter } from 'next/router';
 export default function B2BApplication() {
   const router = useRouter();
   const from = router.query.target;
-  console.log(from);
 
   const context = useContext(HomepageContext);
 
