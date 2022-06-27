@@ -31,7 +31,7 @@ module.exports = {
       fontFamily: {
         appleSD: ['AppleSDNeo', 'sans-serif'],
         sfPro: ['SFPro', 'sans-serif'],
-        notosans: ['Noto Sans KR', 'sans-serif'],
+        notosans: ['NotoSansKR', 'sans-serif'],
       },
       colors: {
         category: '#3953D9',
