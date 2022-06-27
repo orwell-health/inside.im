@@ -1,9 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import Link from 'next/link';
-import Router from 'next/router';
+// import { Head } from 'next/document';
+
 import { HomepageContext } from '../components/homepageContext';
 import Header from '../components/component/Header';
 import Part1 from '../components/main/Part1';
@@ -65,11 +63,15 @@ export default function Home() {
         />
         <meta property="og:image" content="/inside_opengraph.png" />
         <link rel="icon" href="/favicon.ico" />
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=optional"
           rel="stylesheet"
+        /> */}
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
         />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       </Head>
 
       <div className={`w-screen relative`}>
