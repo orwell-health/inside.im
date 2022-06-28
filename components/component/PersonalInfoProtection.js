@@ -155,7 +155,7 @@ export default function QnAItem(props) {
         }`}
       >
         <div
-          className={`w-[24px] h-[24px] rounded-[24px] flex items-center justify-center  mr-[10px]
+          className={`w-[24px] h-[24px] rounded-[24px] flex items-center justify-center  mr-[10px] shrink-0
           ${
             agree
               ? 'bg-qna'
