@@ -1,40 +1,23 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
-
+import React, { useEffect } from 'react';
+import {
+  isBrowser,
+  isDesktop,
+  isChrome,
+  isSafari,
+  isMobile,
+  isIOS,
+  isAndroid,
+  isMacOs,
+} from 'react-device-detect';
 import { Button } from '../elements/Button';
 
-// import browserEnv from 'browser-env';
-
 export default function AppDownload() {
-  let varUA;
-  let isAndroid = false;
-  let isiOSMobile = false;
-  let isiPad = false;
-  let isMac = false;
-  let isSafari = false;
-  let isMobile = false;
-
   useEffect(() => {
-    varUA = navigator.userAgent.toLowerCase();
-
-    isAndroid = /(android)/i.test(navigator.userAgent);
-    isiOSMobile = /(iPhone|iPod|iPad)/i.test(navigator.platform);
-    isiPad = varUA.indexOf('macintosh') > -1 && navigator.maxTouchPoints > 2;
-    isMac = /(Mac)/i.test(navigator.platform);
-    isSafari =
-      navigator.vendor &&
-      navigator.vendor.indexOf('Apple') > -1 &&
-      navigator.userAgent &&
-      navigator.userAgent.indexOf('CriOS') === -1 &&
-      navigator.userAgent.indexOf('FxiOS') === -1;
-
-    isMobile = isAndroid || isiOSMobile || isiPad;
+    console.log(isBrowser, isDesktop, isChrome);
   }, []);
 
   const detectiOS = () => {
-    if (isiOSMobile || isMac || isiPad) {
-      return true;
-    }
-    return false;
+    return isIOS || isMacOs;
   };
 
   const getStoreLink = () => {

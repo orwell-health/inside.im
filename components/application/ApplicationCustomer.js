@@ -84,7 +84,7 @@ export default function ApplicationCustomer(props) {
     }));
   }
 
-  const realSubmit = useCallback(async () => {
+  const realSubmit = async () => {
     try {
       console.log('REAL SUBMIT------------------------------------');
       const jsonData = JSON.stringify({
@@ -118,7 +118,7 @@ export default function ApplicationCustomer(props) {
       // webviewToast(error);
       console.error('result', error);
     }
-  }, [customerData, updateErrorMessage]);
+  };
 
   // 이메일 체크 정규식
   function isValidEmail(asValue) {
