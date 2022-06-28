@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect, useContext } from 'react';
-// import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect, useContext } from 'react';
 
 import Header from '../components/component/Header';
 import Footer from '../components/component/Footer';
