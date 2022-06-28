@@ -8,9 +8,13 @@ export default function Submitted(props) {
   const { from } = props;
   const context = useContext(HomepageContext);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className={`w-full h-full bg-white relative`}>
-      <div className="w-full absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] flex flex-col items-center">
+    <div className={`w-full h-auto bg-white relative`}>
+      <div className="w-full  flex flex-col items-center">
         <div className="font-bold text-[#26282C] text-[27px] leading-[35.1px] wide:text-[40px] wide:leading-[42px]  wide:text-center mb-[30px]">
           {'제출이 완료되었어요'}
         </div>

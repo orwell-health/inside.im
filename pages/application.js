@@ -23,19 +23,20 @@ export default function B2BApplication() {
   }
 
   return (
-    <div className={`w-screen h-screen font-notosans relative  flex flex-col `}>
+    <div
+      className={`w-screen wide:h-screen font-notosans relative  flex flex-col `}
+    >
       <div
-        className={`${
-          context.submitted
-            ? ' flex-initial'
-            : 'fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50'
-        }  `}
+        className={` fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50
+        `}
       >
         <Header target={'main'} />
       </div>
       {context.submitted && (
-        <div className="flex-1 w-screen  px-[20px]  z-30">
-          <Submitted from={from} />
+        <div className=" h-[500px] wide:flex-1 px-[20px]  z-30 flex justify-center items-center ">
+          <div className="translate-y-[30px]">
+            <Submitted from={from} />
+          </div>
         </div>
       )}
       {!context.submitted && (
