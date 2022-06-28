@@ -20,7 +20,7 @@ export default function Part7() {
           : '정신건강과 마음의 걱정을 편하게 공유하는 세상, 함께 만들어요'}
       </div>
 
-      <Link href="/application?target=provider">
+      <Link href="/application?target=service_provider">
         <a>
           <Button
             text={'전문가 등록 문의하기'}

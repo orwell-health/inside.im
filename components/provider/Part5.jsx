@@ -40,7 +40,7 @@ export default function Part5() {
           />
         </div>
 
-        <Link href="/application?target=provider">
+        <Link href="/application?target=service_provider">
           <a>
             <Button
               text={'전문가 등록 문의하기'}

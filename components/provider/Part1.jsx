@@ -46,7 +46,7 @@ function Part1() {
               subtitle={['그렇다면 저희와 함께 고민하세요']}
               style={{ textAlign: 'center' }}
             />
-            <Link href="/application?target=provider">
+            <Link href="/application?target=service_provider">
               <a>
                 <Button
                   text={'전문가 등록 문의하기'}
