@@ -13,7 +13,13 @@ import { HomepageContext } from '../components/homepageContext';
 
 export default function B2BProvider() {
   const context = useContext(HomepageContext);
-
+  useEffect(() => {
+    if (window.innerWidth >= 960) {
+      context.setIsWide(true);
+    } else {
+      context.setIsWide(false);
+    }
+  }, []);
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 960) {

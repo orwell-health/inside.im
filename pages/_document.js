@@ -13,7 +13,7 @@ function Document() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <body>
-        {/* <Main /> */}
+        <Main />
         <NextScript />
       </body>
     </Html>
