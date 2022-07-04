@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
       <ToastContainer />
 
       <div
-        className="font-notosans"
+        // className="font-notosans"
         style={{
           WebkitTapHighlightColor: 'rgba(0,0,0,0)',
         }}

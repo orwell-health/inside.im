@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR:wght@900&display=swap'); */
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+/* 
 @font-face {
   font-family: 'NotoSansKR';
   font-style: normal;
@@ -37,7 +37,7 @@
   font-style: normal;
   font-weight: 900;
   src: url('../public/fonts/NotoSansKR-Black.otf');
-}
+} */
 
 html,
 body {
@@ -45,11 +45,11 @@ body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-  font-family: 'NotoSansKR';
+  font-family: 'Noto Sans KR', 'Noto Sans', sans-serif;
 }
 code {
   /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; */
-  font-family: 'NotoSansKR';
+  font-family: 'Noto Sans KR', 'Noto Sans', sans-serif;
 }
 
 a {
