@@ -17,10 +17,8 @@ export default function B2BProvider() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 960) {
-        console.log('wide');
         context.setIsWide(true);
       } else {
-        console.log('small');
         context.setIsWide(false);
       }
     };
