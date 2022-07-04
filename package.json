@@ -17,6 +17,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "fontfaceobserver": "^2.3.0",
     "framer-motion": "^6.3.11",
     "lottie-web": "^5.9.4",
     "net": "^1.0.2",

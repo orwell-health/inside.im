@@ -17,7 +17,10 @@ import AppDownload from '../component/AppDownload';
 
 function Part1() {
   const context = useContext(HomepageContext);
-
+  const [fontRLoaded, setFontRLoaded] = useState(false);
+  const [fontMLoaded, setFontMLoaded] = useState(false);
+  const [fontBLoaded, setFontBLoaded] = useState(false);
+  const [fontLoaded, setFontLoaded] = useState(false);
   const [scrollAmount, setScrollAmount] = useState(0);
   const { scrollY, scrollYProgress } = useViewportScroll();
   const container = useRef();
@@ -62,7 +65,7 @@ function Part1() {
         </div>
       </motion.div>
       <div className="absolute top-[130px] left-[30px] wide:left-0 wide:top-[50%] wide:translate-y-[calc(-50%-70px)] w-full ">
-        <div className="max-w-[960px] mx-auto ">
+        <div className={`max-w-[960px] mx-auto `}>
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
