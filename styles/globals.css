@@ -12,6 +12,7 @@
       format('woff'),
     url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf')
       format('opentype');
+  font-display: fallback;
   /* src: url('../public/fonts/NotoSansKR-Light.otf'); */
 }
 
@@ -25,6 +26,7 @@
       format('woff'),
     url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf')
       format('opentype');
+  font-display: fallback;
   /* src: url('../public/fonts/NotoSansKR-Regular.otf'); */
 }
 
@@ -38,6 +40,7 @@
       format('woff'),
     url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf')
       format('opentype');
+  font-display: fallback;
   /* src: url('../public/fonts/NotoSansKR-Medium.otf'); */
 }
 
@@ -51,6 +54,7 @@
       format('woff'),
     url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf')
       format('opentype');
+  font-display: fallback;
   /* src: url('../public/fonts/NotoSansKR-Bold.otf'); */
 }
 
@@ -64,6 +68,7 @@
       format('woff'),
     url('//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf')
       format('opentype');
+  font-display: fallback;
   /* src: url('../public/fonts/NotoSansKR-Black.otf'); */
 }
 
