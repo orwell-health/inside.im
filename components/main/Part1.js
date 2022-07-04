@@ -71,7 +71,7 @@ function Part1() {
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'easeIn', delay: 1.5 }}
+            transition={{ duration: 0.5, ease: 'easeIn' }}
             viewport={{ once: true }}
           >
             <MainTitle
