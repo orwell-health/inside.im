@@ -62,7 +62,7 @@ function Part3() {
                   : '  min-w-[800px] '
               }`}
             >
-              <Image src={context.isWide ? iphones : iphones_small} />
+              <Image src={context.isWide ? iphones : iphones_small} priority />
             </div>
           </motion.div>
         </div>
