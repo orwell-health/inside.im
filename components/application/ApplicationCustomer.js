@@ -102,12 +102,10 @@ export default function ApplicationCustomer(props) {
             : customerData['기타 문의'],
         questionType: customerData['문의 유형'],
       });
-      // webviewToast('서버 제출 전');
+      console.log(jsonData);
       const response = await axios.post(`/web/v2/question/submit`, jsonData);
       console.log('RESPONSE----------------', response);
-
       if (response.data.code === 0) {
-        // webviewToast('제출 완료');
         console.log('제출 완료', response.data);
         context.setSubmitted(true);
       } else {
@@ -115,7 +113,6 @@ export default function ApplicationCustomer(props) {
         console.log('issue 안돼!: ', result);
       }
     } catch (error) {
-      // webviewToast(error);
       console.error('result', error);
     }
   };
@@ -123,7 +120,7 @@ export default function ApplicationCustomer(props) {
   // 이메일 체크 정규식
   function isValidEmail(asValue) {
     var regExp =
-      /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+      /(?:[a-z0-9!#$%&‘*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&‘*+/=?^_`{|}~-]+)*|“(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*“)@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
     return regExp.test(asValue); // 형식에 맞는 경우 true 리턴
   }
 
