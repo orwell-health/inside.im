@@ -42,8 +42,8 @@ function Part1() {
               <MainTitle
                 title={
                   context.isWide
-                    ? ['모두가 더 행복해지길', <br />, '바라시나요?']
-                    : ['모두가 더', <br />, '행복해지길', <br />, '바라시나요?']
+                    ? '모두가 더 행복해지길 \n 바라시나요?'
+                    : '모두가 더 \n 행복해지길 \n 바라시나요?'
                 }
                 subtitle={['그렇다면 저희와 함께 고민하세요']}
                 style={{ textAlign: 'center' }}

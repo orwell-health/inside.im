@@ -15,7 +15,7 @@ function Footer(props) {
   return (
     <div className="w-screen bg-black px-[24px] wide:px-[100px] pt-[40px] pb-[50px] wide:py-[70px] wide:flex wide:justify-between">
       <div className="text-[12px] wide:text-[15px] leading-[16.8px] wide:leading-[21px] text-white font-normal mb-[40px] wide:mb-0">
-        <div className="whitespace-pre-line">{footerText}</div>
+        <div>{footerText}</div>
         <div className="flex items-center mt-[20px]  text-white cursor-pointer">
           <div
             onClick={() =>

@@ -15,31 +15,25 @@ import { Button } from '../elements/Button';
 import { SubtitleAndTitle } from '../elements/SubtitleAndTitle';
 import { HorizontalTitleAndText2 } from '../elements/HorizontalTitleAndText2';
 
-function Part5() {
+export default function Part6() {
   const counselors = [
     {
       name: '박지현',
-      title: ['따뜻함이 전달되는', <br />, '시간이 될 수 있도록'],
+      title: '따뜻함이 전달되는 \n 시간이 될 수 있도록',
       explanation: '상담심리사 1급',
       image: 박지현,
       link: 'https://brunch.co.kr/@insidebyorwell/72',
     },
     {
       name: '김미경',
-      title: [
-        '기다려 줘야죠',
-        <br />,
-        '변한다는 건',
-        <br />,
-        '쉽지 않으니까요',
-      ],
+      title: '기다려 줘야죠 \n 변한다는 건 \n 쉽지 않으니까요',
       explanation: '임상심리 전문가',
       image: 김미경,
       link: 'https://brunch.co.kr/@insidebyorwell/71',
     },
     {
       name: '윤혜경',
-      title: ['나를 알고', <br />, '내 잠재력을', <br />, '깨우는 일'],
+      title: '나를 알고 \n 내 잠재력을 \n 깨우는 일',
       explanation: '상담심리사 1급',
       image: 윤혜경,
       link: 'https://brunch.co.kr/@insidebyorwell/89',
@@ -47,21 +41,21 @@ function Part5() {
 
     {
       name: '김벼리',
-      title: ['내담자가 스스로', <br />, '꽃 피울 수 있도록'],
+      title: '내담자가 스스로 \n 꽃 피울 수 있도록',
       explanation: '임상심리 전문가',
       image: 김벼리,
       link: 'https://brunch.co.kr/@insidebyorwell/70',
     },
     {
       name: '전수진',
-      title: ['진정한 나다움을', <br />, '찾아가는 길을 함께'],
+      title: '진정한 나다움을 \n 찾아가는 길을 함께',
       explanation: '상담심리사 1급',
       image: 전수진,
       link: 'https://brunch.co.kr/@insidebyorwell/73',
     },
     {
       name: '김정호',
-      title: ['생각을 바꾸면', <br />, '세상이 달라져요'],
+      title: '생각을 바꾸면 \n 세상이 달라져요',
       explanation: '임상심리 전문가',
       image: 김정호,
       link: 'https://brunch.co.kr/@insidebyorwell/84',
@@ -149,5 +143,3 @@ function Part5() {
     </div>
   );
 }
-
-export default Part5;

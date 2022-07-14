@@ -30,11 +30,7 @@ function Part8() {
       <div className="w-full h-full absolute top-0 left-0 flex flex-col justify-center items-center">
         <div className="mb-[30px] text-center">
           <Title
-            title={[
-              '팀원들의 내면에 집중해보세요',
-              <br />,
-              '더 큰 잠재성을 만나보세요',
-            ]}
+            title={'팀원들의 내면에 집중해보세요 \n 더 큰 잠재성을 만나보세요'}
             style={{ color: 'white' }}
           />
         </div>

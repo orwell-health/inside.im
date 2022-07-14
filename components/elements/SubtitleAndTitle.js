@@ -17,7 +17,7 @@ export function SubtitleAndTitle(props) {
         <div
           className={`${
             subtitle2line ? 'mb-[10px]' : 'mb-[5px]'
-          } wide:mb-[10px] whitespace-pre-line`}
+          } wide:mb-[10px] `}
         >
           <SubTitle subtitle={subtitle} />
         </div>

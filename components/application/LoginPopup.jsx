@@ -177,7 +177,7 @@ export default function LoginPopup(props) {
         </svg>
       </div>
       <div className="text-[30px] leading-[39px] font-bold text-[#26282C] text-center mb-[50px]">
-        {['휴대폰 본인인증으로', <br />, '간편하게 로그인하세요']}
+        {'휴대폰 본인인증으로 \n 간편하게 로그인하세요'}
       </div>
       <div className="w-full mb-[20px]">
         <Input

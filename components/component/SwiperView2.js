@@ -40,37 +40,6 @@ export default function SwiperView(props) {
     }
   });
 
-  // const contents = [
-  //   {
-  //     image: part6_1,
-  //     text: context.isWide
-  //       ? [
-  //           '상담사 선생님과 남들에게 말 못했던 이야기들을 꺼내놓다보니',
-  //           <br />,
-  //           '제가 원래 좋아하고 원하던 것을 하나하나 찾아주시더라구요',
-  //           <br />,
-  //           '상담을 통해서 그동안 흘려보낸 과거의 시간까지도 위로 받았고,',
-  //           <br />,
-  //           '제 안에 미처 발견하지 못했던 부분까지 알게되어 선생님께 정말 감사했습니다.',
-  //         ]
-  //       : [
-  //           '상담사 선생님과 남들에게 말 못했던 이야기들을 꺼내놓다보니 제가 원래 좋아하고 원하던 것을 하나하나 찾아주시더라구요. 상담을 통해서 그동안 흘려보낸 과거의 시간까지도 위로 받았고, 제 안에 미처 발견하지 못했던 부분까지 알게되어 선생님께 정말 감사했습니다.',
-  //         ],
-  //     from: [
-  //       { text: '취업준비로 불안감을 겪은 ', bold: true },
-  //       { text: 'IT업계 직장인 K님', bold: false },
-  //     ],
-  //   },
-  //   {
-  //     image: part6_1,
-  //     text: ['lafknvlad', <br />, 'afldkvnladfv', <br />, 'adflvkm;', <br />, 'adlfknv ladk'],
-  //     from: [
-  //       { text: 'adfknv;aodn ', bold: true },
-  //       { text: 'IT업계 직장인 K님', bold: false },
-  //     ],
-  //   },
-  // ];
-
   SwiperCore.use([Navigation, Pagination, EffectFade, Autoplay]);
   return (
     <div className="w-full">

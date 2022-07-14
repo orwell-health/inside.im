@@ -31,11 +31,7 @@ export default function Part5() {
       <div className="w-full h-full absolute top-0 left-0 flex flex-col justify-center items-center">
         <div className="mb-[30px] text-center">
           <Title
-            title={[
-              '더 많은 사람들을 돕고싶다면',
-              <br />,
-              '인사이드와 함께하세요.',
-            ]}
+            title={'더 많은 사람들을 돕고싶다면 \n 인사이드와 함께하세요.'}
             style={{ color: 'white' }}
           />
         </div>

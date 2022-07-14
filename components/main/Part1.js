@@ -14,8 +14,6 @@ import Image from 'next/image';
 import AppDownload from '../component/AppDownload';
 import useFontLoad from '../../pages/useFontLoad';
 
-// import browserEnv from 'browser-env';
-
 function Part1() {
   const context = useContext(HomepageContext);
   const [scrollAmount, setScrollAmount] = useState(0);

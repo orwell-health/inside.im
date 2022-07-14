@@ -23,9 +23,7 @@ export default function B2BApplication() {
   }
 
   return (
-    <div
-      className={`w-screen wide:h-screen font-notosans relative  flex flex-col `}
-    >
+    <div className={`w-screen wide:h-screen relative  flex flex-col `}>
       <div
         className={` fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50
         `}

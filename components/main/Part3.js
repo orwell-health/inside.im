@@ -31,11 +31,7 @@ function Part3() {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                {[
-                  '이제 인사이드를 통해',
-                  <br />,
-                  '팀의 잠재성을 끌어올릴 시간입니다',
-                ]}
+                {'이제 인사이드를 통해 \n 팀의 잠재성을 끌어올릴 시간입니다'}
               </div>
             </div>
             <SubTitle

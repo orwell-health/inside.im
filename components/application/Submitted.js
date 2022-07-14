@@ -20,11 +20,9 @@ export default function Submitted(props) {
         </div>
 
         <div className="text-[15px] leading-[21.72px] text-[#4E4F53] font-light text-center mb-[40px]">
-          {[
-            '수집된 개인정보는 상담이 종료된 후 파기됩니다.',
-            <br />,
-            '이외 문의사항은 registration@orwellhealth.org로 연락 바랍니다.',
-          ]}
+          {
+            '수집된 개인정보는 상담이 종료된 후 파기됩니다. \n 이외 문의사항은 registration@orwellhealth.org로 연락 바랍니다.'
+          }
         </div>
         <Link href={from === 'service_provider' ? '/provider' : '/main'}>
           <a>

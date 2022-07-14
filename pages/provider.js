@@ -39,7 +39,7 @@ export default function B2BProvider() {
   }, []);
 
   return (
-    <div className={`w-screen relative`}>
+    <div className={`w-screen relative `}>
       <div
         className={`fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50  ${
           fontLoaded ? 'opacity-100' : 'opacity-0'
