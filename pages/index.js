@@ -76,11 +76,7 @@ export default function Home() {
         <meta property="og:image" content="/inside_opengraph.png" />
       </Head>
 
-      <div
-        className={`w-screen relative ${
-          fontLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
+      <div className={`w-screen relative `}>
         <div className="fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50 ">
           <Header target={'main'} />
         </div>

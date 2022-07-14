@@ -12,6 +12,7 @@ import { BUILD_TARGET } from '../../config';
 import SNSLink from '../component/SNSLink';
 import Image from 'next/image';
 import AppDownload from '../component/AppDownload';
+import FontFaceObserver from 'fontfaceobserver';
 
 // import browserEnv from 'browser-env';
 
@@ -23,6 +24,7 @@ function Part1() {
   const [fontLoaded, setFontLoaded] = useState(false);
   const [scrollAmount, setScrollAmount] = useState(0);
   const { scrollY, scrollYProgress } = useViewportScroll();
+
   const container = useRef();
 
   const goGooglePlayStore = () => {
@@ -35,7 +37,14 @@ function Part1() {
   };
 
   useEffect(() => {
-    // console.log(context.isWide);
+    var font = new FontFaceObserver('NotoSansKR', {
+      weight: 400,
+    });
+    font.load().then(function () {
+      console.log('NotoSansKR has loaded.');
+      setFontLoaded(true);
+    });
+
     const instance = lottie.loadAnimation({
       container: container.current,
       renderer: 'svg',
@@ -54,7 +63,7 @@ function Part1() {
 
   return (
     <div
-      className={`w-screen h-[780px] wide:h-[950px] overflow-hidden  relative`}
+      className={`w-screen h-[780px] wide:h-[950px] overflow-hidden  relative `}
     >
       <motion.div style={{ y: -(scrollAmount * 3) / 8 }}>
         <div className="absolute w-full h-full top-0 left-[50%] translate-x-[-50%] min-w-[960px] wide:left-0 wide:translate-x-[0%] ">
@@ -68,45 +77,44 @@ function Part1() {
       </motion.div>
       <div className="absolute top-[130px] left-[30px] wide:left-0 wide:top-[50%] wide:translate-y-[calc(-50%-70px)] w-full ">
         <div className={`max-w-[960px] mx-auto `}>
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'easeIn' }}
-            viewport={{ once: true }}
-          >
-            <MainTitle
-              title={'중요한 건 \n 내 마음이니까'}
-              subtitle={['멘탈케어 솔루션 인사이드']}
-            />
+          {fontLoaded && (
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, ease: 'easeIn' }}
+              viewport={{ once: true }}
+            >
+              <MainTitle
+                title={'중요한 건 \n 내 마음이니까'}
+                subtitle={['멘탈케어 솔루션 인사이드']}
+              />
 
-            {context.isWide && (
-              <div className="text-[18px] leading-[24.52px] text-white font-medium tracking-[-.02em] flex flex-row">
-                <div
-                  className="w-fit h-[56px] py-[13px] px-[27px] bg-black rounded-[12px] mr-[10px] flex cursor-pointer"
-                  onClick={goGooglePlayStore}
-                >
-                  <div className="w-[30px] h-[30px]  mr-[2px]">
-                    <Image src={google} />
-                  </div>
+              {context.isWide && (
+                <div className="text-[18px] leading-[24.52px] text-white font-medium tracking-[-.02em] flex flex-row">
+                  <div
+                    className="w-fit h-[56px] py-[13px] px-[27px] bg-black rounded-[12px] mr-[10px] flex cursor-pointer"
+                    onClick={goGooglePlayStore}
+                  >
+                    <div className="w-[30px] h-[30px]  mr-[2px]">
+                      <Image src={google} />
+                    </div>
 
-                  <div className="mt-[2px]">Google Play</div>
-                </div>
-                <div
-                  className="w-fit h-[56px] py-[13px] px-[27px] bg-black rounded-[12px] mr-[10px] flex cursor-pointer"
-                  onClick={goAppStore}
-                >
-                  <div className="w-[30px] h-[30px]  mr-[2px]">
-                    <Image src={apple} />
+                    <div className="mt-[2px]">Google Play</div>
                   </div>
-                  <span className="mt-[2px]">App Store</span>
+                  <div
+                    className="w-fit h-[56px] py-[13px] px-[27px] bg-black rounded-[12px] mr-[10px] flex cursor-pointer"
+                    onClick={goAppStore}
+                  >
+                    <div className="w-[30px] h-[30px]  mr-[2px]">
+                      <Image src={apple} />
+                    </div>
+                    <span className="mt-[2px]">App Store</span>
+                  </div>
                 </div>
-              </div>
-            )}
-            {!context.isWide && (
-              <AppDownload />
-              // <Button text={'앱 다운받기'} click={goToAppScheme} />
-            )}
-          </motion.div>
+              )}
+              {!context.isWide && <AppDownload />}
+            </motion.div>
+          )}
         </div>
       </div>
       <div className="absolute bottom-[40px] w-full">
