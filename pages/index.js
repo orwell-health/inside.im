@@ -32,7 +32,7 @@ export default function Home() {
     var font = new FontFaceObserver('NotoSansKR', {
       weight: 400,
     });
-    font.load().then(function () {
+    font.load(null, 10000).then(function () {
       console.log('NotoSansKR has loaded.');
       setFontLoaded(true);
     });
