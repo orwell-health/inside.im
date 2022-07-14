@@ -42,7 +42,7 @@ function Part2() {
                 <Image src={homepageProvider_part2_1} />
               </div>
               <div>
-                <div className="mb-[20px] whitespace-nowrap">
+                <div className="mb-[20px] ">
                   <Title3
                     title={'사회 인식과 주변 시선으로 \n 치료를 주저하거나'}
                   />
