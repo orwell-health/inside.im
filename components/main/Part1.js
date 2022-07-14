@@ -18,9 +18,6 @@ import FontFaceObserver from 'fontfaceobserver';
 
 function Part1() {
   const context = useContext(HomepageContext);
-  const [fontRLoaded, setFontRLoaded] = useState(false);
-  const [fontMLoaded, setFontMLoaded] = useState(false);
-  const [fontBLoaded, setFontBLoaded] = useState(false);
   const [fontLoaded, setFontLoaded] = useState(false);
   const [scrollAmount, setScrollAmount] = useState(0);
   const { scrollY, scrollYProgress } = useViewportScroll();

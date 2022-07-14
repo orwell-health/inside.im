@@ -18,6 +18,7 @@ function B2BMain() {
   const context = useContext(HomepageContext);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (window.innerWidth >= 960) {
       context.setIsWide(true);
     } else {

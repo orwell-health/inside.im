@@ -22,6 +22,8 @@ export default function Home() {
   const [fontLoaded, setFontLoaded] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+    window.history.scrollRestoration = 'manual';
     if (window.innerWidth >= 960) {
       context.setIsWide(true);
     } else {
