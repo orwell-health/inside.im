@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
 import Head from 'next/head';
-// import { Head } from 'next/document';
-
 import { HomepageContext } from '../components/homepageContext';
 import Header from '../components/component/Header';
 import Part1 from '../components/main/Part1';
@@ -15,11 +13,11 @@ import Part8 from '../components/main/Part8';
 import Part9 from '../components/main/Part9';
 import Part10 from '../components/main/Part10';
 import Footer from '../components/component/Footer';
-import FontFaceObserver from 'fontfaceobserver';
+import useFontLoad from './useFontLoad';
 
 export default function Home() {
   const context = useContext(HomepageContext);
-  const [fontLoaded, setFontLoaded] = useState(false);
+  const [fontLoaded] = useFontLoad();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,13 +27,6 @@ export default function Home() {
     } else {
       context.setIsWide(false);
     }
-    var font = new FontFaceObserver('NotoSansKR', {
-      weight: 400,
-    });
-    font.load(null, 10000).then(function () {
-      console.log('NotoSansKR has loaded.');
-      setFontLoaded(true);
-    });
   }, []);
 
   useEffect(() => {

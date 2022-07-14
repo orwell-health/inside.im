@@ -12,16 +12,15 @@ import { BUILD_TARGET } from '../../config';
 import SNSLink from '../component/SNSLink';
 import Image from 'next/image';
 import AppDownload from '../component/AppDownload';
-import FontFaceObserver from 'fontfaceobserver';
+import useFontLoad from '../../pages/useFontLoad';
 
 // import browserEnv from 'browser-env';
 
 function Part1() {
   const context = useContext(HomepageContext);
-  const [fontLoaded, setFontLoaded] = useState(false);
   const [scrollAmount, setScrollAmount] = useState(0);
   const { scrollY, scrollYProgress } = useViewportScroll();
-
+  const [fontLoaded] = useFontLoad();
   const container = useRef();
 
   const goGooglePlayStore = () => {
@@ -34,14 +33,6 @@ function Part1() {
   };
 
   useEffect(() => {
-    var font = new FontFaceObserver('NotoSansKR', {
-      weight: 400,
-    });
-    font.load(null, 10000).then(function () {
-      console.log('NotoSansKR has loaded.');
-      setFontLoaded(true);
-    });
-
     const instance = lottie.loadAnimation({
       container: container.current,
       renderer: 'svg',

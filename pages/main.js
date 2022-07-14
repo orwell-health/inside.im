@@ -11,12 +11,12 @@ import Part8 from '../components/main/Part8';
 import Part9 from '../components/main/Part9';
 import Part10 from '../components/main/Part10';
 import Footer from '../components/component/Footer';
-
 import { HomepageContext } from '../components/homepageContext';
+import useFontLoad from './useFontLoad';
 
 function B2BMain() {
   const context = useContext(HomepageContext);
-
+  const [fontLoaded] = useFontLoad();
   useEffect(() => {
     window.scrollTo(0, 0);
     if (window.innerWidth >= 960) {
@@ -40,7 +40,11 @@ function B2BMain() {
 
   return (
     <div className={`w-screen font-notosans relative`}>
-      <div className="fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50 ">
+      <div
+        className={`fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50  ${
+          fontLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <Header target={'main'} />
       </div>
       <Part1 />
