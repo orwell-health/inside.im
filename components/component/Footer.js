@@ -8,22 +8,14 @@ function Footer(props) {
 
   useEffect(() => {
     setFooterText([
-      '(주) 오웰헬스',
-      <br />,
-      '대표 홍승주   사업자등록번호 378-86-02282',
-      <br />,
-      '통신판매업신고 제 2022-서울강남-02138 호',
-      <br />,
-      '서울특별시 강남구 테헤란로 151, 3층 301호 (역삼동, 역삼 하이츠 빌딩)',
-      <br />,
-      'admin@orwellhealth.org  /  070-7954-3518',
+      '(주) 오웰헬스 \n 대표 홍승주   사업자등록번호 378-86-02282 \n 통신판매업신고 제 2022-서울강남-02138 호 \n 서울특별시 강남구 테헤란로 151, 3층 301호 (역삼동, 역삼 하이츠 빌딩) \n admin@orwellhealth.org  /  070-7954-3518',
     ]);
   }, []);
 
   return (
     <div className="w-screen bg-black px-[24px] wide:px-[100px] pt-[40px] pb-[50px] wide:py-[70px] wide:flex wide:justify-between">
       <div className="text-[12px] wide:text-[15px] leading-[16.8px] wide:leading-[21px] text-white font-normal mb-[40px] wide:mb-0">
-        <div>{footerText}</div>
+        <div className="whitespace-pre-line">{footerText}</div>
         <div className="flex items-center mt-[20px]  text-white cursor-pointer">
           <div
             onClick={() =>

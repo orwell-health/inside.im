@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Title } from '../elements/Title';
 import { motion, useViewportScroll } from 'framer-motion';
 
-function Part2Test() {
+export default function Part2() {
   const pageRef = useRef();
   const titleRef = useRef();
   const row1Ref = useRef();
@@ -63,11 +63,7 @@ function Part2Test() {
           ref={titleRef}
         >
           <Title
-            title={[
-              '우리 팀도 이런 고민,',
-              <br />,
-              '한 번 쯤은 있지 않았나요?',
-            ]}
+            title={['우리 팀도 이런 고민, \n 한 번 쯤은 있지 않았나요?']}
             style={{ color: 'white' }}
           />
         </div>
@@ -139,5 +135,3 @@ function Part2Test() {
     //
   );
 }
-
-export default Part2Test;

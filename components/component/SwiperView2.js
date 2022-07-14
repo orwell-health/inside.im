@@ -132,7 +132,7 @@ export default function SwiperView(props) {
           virtualTranslate={true}
         >
           {contents.map((content, index) => (
-            <SwiperSlide key={index} className="mb-[80px]">
+            <SwiperSlide key={`swiperview${index}`} className="mb-[80px]">
               <Part6Card
                 image={content.image}
                 text={content.text}

@@ -16,6 +16,7 @@ import { HomepageContext } from '../components/homepageContext';
 
 function B2BMain() {
   const context = useContext(HomepageContext);
+
   useEffect(() => {
     if (window.innerWidth >= 960) {
       context.setIsWide(true);

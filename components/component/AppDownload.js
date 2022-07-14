@@ -13,7 +13,7 @@ import { Button } from '../elements/Button';
 
 export default function AppDownload() {
   useEffect(() => {
-    console.log(isBrowser, isDesktop, isChrome);
+    // console.log(isBrowser, isDesktop, isChrome);
   }, []);
 
   const detectiOS = () => {

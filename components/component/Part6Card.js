@@ -15,7 +15,7 @@ function Part6Card(props) {
       <div>
         {from.map((each, index) => (
           <span
-            key={index}
+            key={`part6Card${index}`}
             className="text-[14px] wide:text-[20px] leading-[21px] wide: leading-[30px] text-[#26282C] text-center"
           >
             <span className={`${each.bold ? 'font-bold' : 'font-normal'}`}>

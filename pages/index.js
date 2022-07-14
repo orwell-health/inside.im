@@ -15,15 +15,25 @@ import Part8 from '../components/main/Part8';
 import Part9 from '../components/main/Part9';
 import Part10 from '../components/main/Part10';
 import Footer from '../components/component/Footer';
+import FontFaceObserver from 'fontfaceobserver';
 
 export default function Home() {
   const context = useContext(HomepageContext);
+  const [fontLoaded, setFontLoaded] = useState(false);
+
   useEffect(() => {
     if (window.innerWidth >= 960) {
       context.setIsWide(true);
     } else {
       context.setIsWide(false);
     }
+    var font = new FontFaceObserver('NotoSansKR', {
+      weight: 400,
+    });
+    font.load().then(function () {
+      console.log('NotoSansKR has loaded.');
+      setFontLoaded(true);
+    });
   }, []);
 
   useEffect(() => {
@@ -66,7 +76,11 @@ export default function Home() {
         <meta property="og:image" content="/inside_opengraph.png" />
       </Head>
 
-      <div className={`w-screen relative `}>
+      <div
+        className={`w-screen relative ${
+          fontLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <div className="fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50 ">
           <Header target={'main'} />
         </div>

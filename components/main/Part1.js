@@ -35,7 +35,7 @@ function Part1() {
   };
 
   useEffect(() => {
-    console.log(context.isWide);
+    // console.log(context.isWide);
     const instance = lottie.loadAnimation({
       container: container.current,
       renderer: 'svg',
@@ -75,7 +75,7 @@ function Part1() {
             viewport={{ once: true }}
           >
             <MainTitle
-              title={['중요한 건', <br />, '내 마음이니까']}
+              title={'중요한 건 \n 내 마음이니까'}
               subtitle={['멘탈케어 솔루션 인사이드']}
             />
 

@@ -33,7 +33,7 @@ export default function Part9() {
       </div>
       <div />
       {qnaList.map((qna, index) => (
-        <div>
+        <div key={`qna${index}`}>
           {index === 0 && <div className="w-full h-[1px] bg-[#26282C]" />}
           <div className="">
             <QnAItem question={qna.question} answer={qna.answer} />

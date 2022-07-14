@@ -14,7 +14,11 @@ export function SubtitleAndTitle(props) {
         transition={{ duration: 0.7, ease: 'easeIn' }}
         viewport={{ once: true }}
       >
-        <div className={`${subtitle2line ? 'mb-[10px]' : 'mb-[5px]'} wide:mb-[10px] `}>
+        <div
+          className={`${
+            subtitle2line ? 'mb-[10px]' : 'mb-[5px]'
+          } wide:mb-[10px] whitespace-pre-line`}
+        >
           <SubTitle subtitle={subtitle} />
         </div>
 

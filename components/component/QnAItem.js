@@ -17,10 +17,10 @@ export default function QnAItem(props) {
       setLoaded(true);
     }, 100);
     if (detailRef.current && titleRef.current) {
-      console.log(
-        detailRef.current.offsetHeight,
-        titleRef.current.offsetHeight,
-      );
+      // console.log(
+      //   detailRef.current.offsetHeight,
+      //   titleRef.current.offsetHeight,
+      // );
     }
   }, []);
 
