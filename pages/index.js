@@ -80,7 +80,7 @@ export default function Home() {
         <div
           className={`fixed top-0 left-[50%] translate-x-[-50%]  w-full  z-50 ${
             fontLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          } transition-all`}
         >
           <Header target={'main'} />
         </div>
