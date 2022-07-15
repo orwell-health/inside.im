@@ -110,12 +110,14 @@ function Header(props) {
       )}
       {!context.isWide && (
         <motion.div
-          animate={{ background: mobileMenuOpen ? 'white' : 'transparent' }}
-          transition={{
-            delay: !mobileMenuOpen && loaded ? 0.2 : 0,
-            duration: loaded ? 0.1 : 0,
-          }}
-          className="bg-white transition-all"
+          // animate={{ background: mobileMenuOpen ? 'white' : 'transparent' }}
+          // transition={{
+          //   delay: !mobileMenuOpen && loaded ? 0.2 : 0,
+          //   duration: loaded ? 0.1 : 0,
+          // }}
+          className={`${
+            mobileMenuOpen ? 'bg-white ' : 'bg-[rgba(0,0,0,0)] delay-100'
+          } transition-all`}
         >
           <div className="w-screen h-[60px] pl-[26px] pr-[24px] flex justify-between ">
             <Link href="/main">
@@ -223,9 +225,11 @@ function Header(props) {
             </div>
           </div>
           <motion.div
-            animate={{ height: mobileMenuOpen ? '140px' : '0' }}
-            transition={{ duration: loaded ? 0.2 : 0, ease: 'easeInOut' }}
-            className="overflow-hidden bg-white"
+            // animate={{ height: mobileMenuOpen ? '140px' : '0' }}
+            // transition={{ duration: loaded ? 0.2 : 0, ease: 'easeInOut' }}
+            className={`${
+              mobileMenuOpen ? 'h-[140px]' : 'h-0'
+            } overflow-hidden bg-white transition-all`}
           >
             <div className="h-full">
               <Link
