@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import google from '../../public/image/google.png';
 import apple from '../../public/image/apple.png';
-import homepage_main from '../../public/image/homepage_main2.png';
-import homepage_main_small from '../../public/image/homepage_main_small2.png';
+import homepage_main from '../../public/image/homepage_main.png';
+import homepage_main_small from '../../public/image/homepage_main_small.png';
 import { MainTitle } from '../elements/MainTitle';
 import { Button } from '../elements/Button';
 import { motion, useViewportScroll } from 'framer-motion';
@@ -55,7 +55,12 @@ function Part1() {
       <motion.div style={{ y: -(scrollAmount * 3) / 8 }}>
         <div className="absolute w-full h-full top-0 left-[50%] translate-x-[-50%] min-w-[960px] wide:left-0 wide:translate-x-[0%] ">
           {context.isWide && (
-            <Image src={homepage_main} placeholder="blur" priority />
+            <Image
+              src={homepage_main}
+              placeholder="blur"
+              priority
+              // width="100%"
+            />
           )}
           {!context.isWide && (
             <Image src={homepage_main_small} placeholder="blur" priority />

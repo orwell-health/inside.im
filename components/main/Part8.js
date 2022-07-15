@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 // import { useNavigate } from 'react-router-dom';
-import homepageMain_part8 from '../../public/image/homepageMain_part8_2.png';
+import homepageMain_part8 from '../../public/image/homepageMain_part8.png';
 import { Title } from '../elements/Title';
 import { Button } from '../elements/Button';
 import { HomepageContext } from '../homepageContext';
