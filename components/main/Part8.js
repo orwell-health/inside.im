@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 // import { useNavigate } from 'react-router-dom';
-import homepageMain_part8 from '../../public/image/homepageMain_part8.png';
+import homepageMain_part8 from '../../public/image/homepageMain_part8_1.5.png';
 import { Title } from '../elements/Title';
 import { Button } from '../elements/Button';
 import { HomepageContext } from '../homepageContext';
@@ -23,7 +23,11 @@ function Part8() {
             className="w-full object-fit my-auto"
             alt="empty"
           /> */}
-          <Image src={homepageMain_part8} placeholder="blur" />
+          <Image
+            src={homepageMain_part8}
+            placeholder="blur"
+            layout="responsive"
+          />
         </div>
       </div>
       <div className="w-full h-full absolute top-0 left-0 bg-black opacity-50 " />

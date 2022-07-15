@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import homepageProvider_part5 from '../../public/image/homepageProvider_part5.png';
+import homepageProvider_part5 from '../../public/image/homepageProvider_part5_1.5.png';
 import { Title } from '../elements/Title';
 import { Button } from '../elements/Button';
 
@@ -18,7 +18,11 @@ export default function Part5() {
           style={{ minWidth: context.isWide ? '1200px' : '720px' }}
           className="w-full h-full absolute top-0 left-[50%] translate-x-[-50%]  "
         >
-          <Image src={homepageProvider_part5} placeholder="blur" />
+          <Image
+            src={homepageProvider_part5}
+            placeholder="blur"
+            layout="responsive"
+          />
         </div>
       </div>
       <div className="w-full h-full absolute top-0 left-0 bg-black opacity-50 " />

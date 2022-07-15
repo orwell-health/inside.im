@@ -1,14 +1,12 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import google from '../../public/image/google.png';
 import apple from '../../public/image/apple.png';
-import homepage_main from '../../public/image/homepage_main.png';
-import homepage_main_small from '../../public/image/homepage_main_small.png';
+import homepage_main from '../../public/image/homepage_main_1.5.png';
+import homepage_main_small from '../../public/image/homepage_main_small_1.5.png';
 import { MainTitle } from '../elements/MainTitle';
-import { Button } from '../elements/Button';
 import { motion, useViewportScroll } from 'framer-motion';
 import lottie from 'lottie-web';
 import { HomepageContext } from '../homepageContext';
-import { BUILD_TARGET } from '../../config';
 import SNSLink from '../component/SNSLink';
 import Image from 'next/image';
 import AppDownload from '../component/AppDownload';
@@ -59,7 +57,7 @@ function Part1() {
               src={homepage_main}
               placeholder="blur"
               priority
-              // width="100%"
+              layout="responsive"
             />
           )}
           {!context.isWide && (

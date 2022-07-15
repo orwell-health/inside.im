@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import Part4Card from '../component/Part4Card';
-import part4_1 from '../../public/image/homepageMain_part4_1.png';
-import part4_2 from '../../public/image/homepageMain_part4_2.png';
+import part4_1 from '../../public/image/homepageMain_part4_1_1.5.png';
+import part4_2 from '../../public/image/homepageMain_part4_2_1.5.png';
 import { SubtitleAndTitle } from '../elements/SubtitleAndTitle';
 import { HomepageContext } from '../homepageContext';
-import Image from 'next/image';
 
 function Part4() {
   const context = useContext(HomepageContext);
