@@ -2,7 +2,7 @@
 import React, { useReducer, createContext } from 'react';
 
 const initialState = {
-  isWide: false,
+  isWide: true,
   mobileAuthKey: '',
   showLoginPopup: false,
   submitted: false,
@@ -10,34 +10,30 @@ const initialState = {
 
 const HomepageContext = createContext({
   ...initialState,
-  isWide: true,
-  mobileAuthKey: '',
-  showLoginPopup: false,
-  submitted: false,
-  setIsWide: (isWide) => {},
-  setMobileAuthKey: (mobileAuthKey) => {},
-  setShowLoginPopup: (showLoginPopup) => {},
-  setSubmitted: (submitted) => {},
+  setIsWide: () => {},
+  setMobileAuthKey: () => {},
+  setShowLoginPopup: () => {},
+  setSubmitted: () => {},
 });
 
 function homepageReducer(state, action) {
   switch (action.type) {
-    case 'SETISWIDE':
+    case 'SET_IS_WIDE':
       return {
         ...state,
         isWide: action.payload,
       };
-    case 'SETMOBILEAUTHKEY':
+    case 'SET_MOBILE_AUTH_KEY':
       return {
         ...state,
         mobileAuthKey: action.payload,
       };
-    case 'SETSHOWLOGINPOPUP':
+    case 'SET_SHOW_LOGIN_POPUP':
       return {
         ...state,
         showLoginPopup: action.payload,
       };
-    case 'SETSUBMITTED':
+    case 'SET_SUBMITTED':
       return {
         ...state,
         submitted: action.payload,
@@ -50,26 +46,26 @@ function HomepageProvider(props) {
 
   function setIsWide(isWide) {
     dispatch({
-      type: 'SETISWIDE',
+      type: 'SET_IS_WIDE',
       payload: isWide,
     });
   }
   function setMobileAuthKey(mobileAuthKey) {
     dispatch({
-      type: 'SETMOBILEAUTHKEY',
+      type: 'SET_MOBILE_AUTH_KEY',
       payload: mobileAuthKey,
     });
   }
   function setShowLoginPopup(showLoginPopup) {
     dispatch({
-      type: 'SETSHOWLOGINPOPUP',
+      type: 'SET_SHOW_LOGIN_POPUP',
       payload: showLoginPopup,
     });
   }
 
   function setSubmitted(submitted) {
     dispatch({
-      type: 'SETSUBMITTED',
+      type: 'SET_SUBMITTED',
       payload: submitted,
     });
   }
@@ -77,10 +73,7 @@ function HomepageProvider(props) {
   return (
     <HomepageContext.Provider
       value={{
-        isWide: state.isWide,
-        mobileAuthKey: state.mobileAuthKey,
-        showLoginPopup: state.showLoginPopup,
-        submitted: state.submitted,
+        ...state,
         setIsWide,
         setMobileAuthKey,
         setShowLoginPopup,
