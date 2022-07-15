@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import SNSLink from './SNSLink';
 import { HomepageContext } from '../homepageContext';
 

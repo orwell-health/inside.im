@@ -9,7 +9,6 @@ import providerPoint5 from '../../public/image/homepageProvider_part4_5.png';
 import providerPoint6 from '../../public/image/homepageProvider_part4_6.png';
 
 import { SubtitleAndTitle } from '../elements/SubtitleAndTitle';
-import { Title3 } from '../elements/Title3';
 
 import { HomepageContext } from '../homepageContext';
 import Image from 'next/image';

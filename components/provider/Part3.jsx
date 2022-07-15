@@ -50,11 +50,6 @@ function Part3() {
             transition={{ duration: 0.7, ease: 'easeIn' }}
             viewport={{ once: true }}
           >
-            {/* <img
-              className={` ${context.isWide ? 'w-full' : '  min-w-[800px] '}`}
-              src={context.isWide ? iphones : iphones_small}
-              alt={'empty'}
-            />{' '} */}
             <div
               className={` ${
                 context.isWide

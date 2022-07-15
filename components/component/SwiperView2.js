@@ -124,7 +124,6 @@ export default function SwiperView(props) {
               }
             }}
             onTouchStart={(e) => {
-              // console.log('mousedown');
               setNextButtonDown(true);
             }}
             onTouchEnd={(e) => {

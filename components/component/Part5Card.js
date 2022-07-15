@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import iphone13 from '../../public/image/iphone13.png';
-// import iphone13_shadow from '../../image/iphone13_shadow.png';
 import { HomepageContext } from '../homepageContext';
 import Image from 'next/image';
 

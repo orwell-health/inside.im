@@ -8,12 +8,6 @@ function Part4Card(props) {
   return (
     <div className="w-full ">
       <div className="w-full h-[200px] wide:h-[400px] rounded-[15px] wide:rounded-[30px]  overflow-hidden  mb-[30px] wide:mb-[80px] relative">
-        {/* <img
-          src={image}
-          style={{ minWidth: imageWidth }}
-          className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] "
-          alt="empty"
-        /> */}
         <div
           style={{ minWidth: imageWidth }}
           className="w-full absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] "
