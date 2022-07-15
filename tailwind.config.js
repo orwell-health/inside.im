@@ -89,10 +89,8 @@ module.exports = {
         dropdown: ' 0px 3px 8px 0px #0000001A',
         loginPopup: '0px 10px 20px -10px #29315D38',
         header: '0px 1px 2px 0px rgba(0, 0, 0, 0.15)',
-        // iphone: '-40px 15px 50px rgba(0, 0, 0, 0.25)',
       },
       dropShadow: {
-        header: '0px 1px 2px 0px rgba(0, 0, 0, 0.15)',
         iphone: '-40px 15px 50px rgba(0, 0, 0, 0.25)',
       },
       backgroundImage: {

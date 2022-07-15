@@ -72,13 +72,17 @@ function Part5Card(props) {
             viewport={{ once: true }}
           >
             <div className="relative ">
-              {/* <div className="absolute top-[-145px] right-[-109px]  z-10">
-                <img className="scale-3" src={iphone13_shadow} alt="empty" />
-              </div> */}
-
-              <div className="absolute top-0 drop-shadow-iphone">
+              <motion.div
+                className="absolute top-0  " //drop-shadow-iphone
+                initial={{ filter: '' }}
+                whileInView={{
+                  filter: 'drop-shadow(-40px 15px 50px rgba(0, 0, 0, 0.25))',
+                }}
+                transition={{ duration: 0.1, ease: 'easeIn' }}
+                viewport={{ once: true }}
+              >
                 <Image src={iphone13} />
-              </div>
+              </motion.div>
 
               <div className=" rounded-[43px] absolute top-[11px] bottom-[11px] left-[13px] right-[13px] wide:top-[20px] wide:bottom-[20px] wide:left-[26px] wide:right-[26px]  ">
                 <Image src={image} objectFit="cover" />

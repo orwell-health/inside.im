@@ -33,7 +33,7 @@ function Part2() {
           transition={{ duration: 0.7, ease: 'easeIn' }}
           viewport={{ once: true }}
         >
-          <div className="wide:z-10 wide:absolute wide:top-0 wide:left-0 h-[371px] wide:h-[560px] bg-[#DEE7FF] rounded-[25px] wide:rounded-[50px] w-full wide:w-[52%] py-[30px] wide:py-[60px] px-[25px] wide:px-[50px] mb-[20px] wide:mb-0">
+          <div className="wide:z-10 wide:absolute wide:top-0 wide:left-0 h-[371px] wide:h-[560px] bg-[#DEE7FF] rounded-[25px] wide:rounded-[50px] w-full wide:w-[52%] py-[30px] wide:py-[60px] px-[25px] wide:px-[25px] mb-[20px] wide:mb-0">
             <div className=" w-full h-full flex flex-col  items-center justify-between text-center">
               <div className="text-[22px] leading-[30.8px] wide:text-[30px] wide:leading-[42px] font-bold text-[#3953D9]">
                 {['“일반인 3명 중 1명”']}
