@@ -27,12 +27,19 @@ function Header(props) {
   }, [scrollY]);
 
   useEffect(() => {
+    setLoaded(false);
+    setMobileMenuOpen(false);
+  }, [context.isWide]);
+
+  useEffect(() => {
     setTimeout(() => {
+      console.log('loaded', loaded, mobileMenuOpen);
       setLoaded(true);
-    }, 100);
-  }, []);
+    }, 300);
+  }, [loaded]);
 
   function menuOpen() {
+    console.log('menu open');
     setMobileMenuOpen((mobileMenuOpen) => !mobileMenuOpen);
   }
   return (
@@ -88,21 +95,6 @@ function Header(props) {
                   전문가 지원
                 </div>
               </Link>
-
-              {/* <div key={3} className="mr-[60px]">
-                회사소개
-              </div>
-              <div
-                key={4}
-                className="mr-[60px]"
-                onClick={() => {
-                  console.log('로그인');
-                  context.setShowLoginPopup(true);
-                  // setLoginPopupShow(true);
-                }}
-              >
-                로그인
-              </div> */}
             </div>
             <div className="pt-[24px] shrink-0">
               <Link href={`/application?target=service_${target}`}>
@@ -121,7 +113,7 @@ function Header(props) {
           animate={{ background: mobileMenuOpen ? 'white' : 'transparent' }}
           transition={{
             delay: !mobileMenuOpen && loaded ? 0.2 : 0,
-            duration: 0.1,
+            duration: loaded ? 0.1 : 0,
           }}
           className="bg-white transition-all"
         >
@@ -233,7 +225,7 @@ function Header(props) {
           <motion.div
             animate={{ height: mobileMenuOpen ? '140px' : '0' }}
             transition={{ duration: loaded ? 0.2 : 0, ease: 'easeInOut' }}
-            className="overflow-hidden"
+            className="overflow-hidden bg-white"
           >
             <div className="h-full">
               <Link
@@ -242,7 +234,7 @@ function Header(props) {
                 }}
               >
                 <div
-                  className="h-[60px] py-[19px] px-[30px] bg-white hover:bg-[#F6F8FF]"
+                  className="h-[60px] py-[19px] px-[30px]  hover:bg-[#F6F8FF]"
                   onClick={() => {
                     setMobileMenuOpen(false);
                   }}
@@ -253,7 +245,7 @@ function Header(props) {
               <div className="w-full px-[20px]">
                 <div className="h-[1px] w-full bg-[#E1E4EB] mt-[10px] " />
               </div>
-              <div className="h-[70px] py-[15px] px-[30px] bg-white ">
+              <div className="h-[70px] py-[15px] px-[30px]  ">
                 <SNSLink
                   backgroundColor={'transparent'}
                   logoColor={'#26282C'}

@@ -2,7 +2,7 @@
 import React, { useReducer, createContext } from 'react';
 
 const initialState = {
-  isWide: false,
+  isWide: true,
   mobileAuthKey: '',
   showLoginPopup: false,
   submitted: false,

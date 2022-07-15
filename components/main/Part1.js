@@ -17,7 +17,7 @@ function Part1() {
   const [scrollAmount, setScrollAmount] = useState(0);
   const { scrollY, scrollYProgress } = useViewportScroll();
   const [fontLoaded] = useFontLoad();
-  console.log('font', fontLoaded);
+
   const container = useRef();
 
   const goGooglePlayStore = () => {

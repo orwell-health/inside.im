@@ -17,6 +17,7 @@ import useFontLoad from './useFontLoad';
 function B2BMain() {
   const context = useContext(HomepageContext);
   const [fontLoaded] = useFontLoad();
+
   useEffect(() => {
     window.scrollTo(0, 0);
     if (window.innerWidth >= 960) {
