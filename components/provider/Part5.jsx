@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import homepageProvider_part5 from '../../public/image/homepageProvider_part5.png';
+import homepageProvider_part5 from '../../public/image/homepageProvider_part5_2.png';
 import { Title } from '../elements/Title';
 import { Button } from '../elements/Button';
 

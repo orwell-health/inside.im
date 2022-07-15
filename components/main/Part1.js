@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import google from '../../public/image/google.png';
 import apple from '../../public/image/apple.png';
-import homepage_main from '../../public/image/homepage_main.png';
-import homepage_main_small from '../../public/image/homepage_main_small.png';
+import homepage_main from '../../public/image/homepage_main2.png';
+import homepage_main_small from '../../public/image/homepage_main_small2.png';
 import { MainTitle } from '../elements/MainTitle';
 import { Button } from '../elements/Button';
 import { motion, useViewportScroll } from 'framer-motion';
