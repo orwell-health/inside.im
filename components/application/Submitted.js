@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 
 import Link from 'next/link';
 import { HomepageContext } from '../homepageContext';
@@ -24,7 +24,13 @@ export default function Submitted(props) {
             '수집된 개인정보는 상담이 종료된 후 파기됩니다. \n 이외 문의사항은 registration@orwellhealth.org로 연락 바랍니다.'
           }
         </div>
-        <Link href={from === 'service_provider' ? '/provider' : '/main'}>
+        <Link
+          href={
+            from === 'service_provider' || from === 'provider'
+              ? '/provider'
+              : '/main'
+          }
+        >
           <a>
             <Button
               text={'홈으로 가기'}

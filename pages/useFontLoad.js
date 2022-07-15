@@ -26,19 +26,19 @@ export default function useFontLoad() {
       console.log('아직 로드 안함');
 
       font4.load(null, 5000).then(function () {
-        console.log('NotoSansKR400 has loaded.');
+        // console.log('NotoSansKR400 has loaded.');
         setFont4Loaded(true);
       });
       font5.load(null, 5000).then(function () {
-        console.log('NotoSansKR500 has loaded.');
+        // console.log('NotoSansKR500 has loaded.');
         setFont5Loaded(true);
       });
       font7.load(null, 5000).then(function () {
-        console.log('NotoSansKR700 has loaded.');
+        // console.log('NotoSansKR700 has loaded.');
         setFont7Loaded(true);
       });
       font9.load(null, 5000).then(function () {
-        console.log('NotoSansKR900 has loaded.');
+        // console.log('NotoSansKR900 has loaded.');
         window.localStorage.setItem('fontLoaded', 'true');
         setFont9Loaded(true);
       });

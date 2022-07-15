@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function ApplicationTemplate(props) {
   const { from } = props;
-
+  console.log(from);
   return (
     <div
       className={`w-screen pt-[50px] wide:pt-[80px] pb-[60px] wide:pb-[150px] relative `}

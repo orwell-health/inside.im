@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-// import { useNavigate } from 'react-router-dom';
 
 import homepageProvider_part5 from '../../public/image/homepageProvider_part5.png';
 import { Title } from '../elements/Title';
@@ -19,11 +18,6 @@ export default function Part5() {
           style={{ minWidth: context.isWide ? '1200px' : '720px' }}
           className="w-full h-full absolute top-0 left-[50%] translate-x-[-50%]  "
         >
-          {/* <img
-            src={homepageProvider_part5}
-            className="w-full object-fit my-auto"
-            alt="empty"
-          /> */}
           <Image src={homepageProvider_part5} placeholder="blur" />
         </div>
       </div>
@@ -36,7 +30,7 @@ export default function Part5() {
           />
         </div>
 
-        <Link href="/application?target=service_provider">
+        <Link href="/application?target=provider">
           <a>
             <Button
               text={'전문가 등록 문의하기'}
