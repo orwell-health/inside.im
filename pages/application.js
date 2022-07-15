@@ -16,6 +16,23 @@ export default function B2BApplication() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (window.innerWidth >= 960) {
+      context.setIsWide(true);
+    } else {
+      context.setIsWide(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 960) {
+        context.setIsWide(true);
+      } else {
+        context.setIsWide(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   function isLoggedIn() {
