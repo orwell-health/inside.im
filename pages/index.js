@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
+      {/* <Head>
         <meta
           name="naver-site-verification"
           content="e2b740f85984f18eefaf08b68b2c6299aa0a9373"
@@ -67,7 +67,7 @@ export default function Home() {
           content="인사이드에서 과학적인 멘탈케어 프로그램을 경험해보세요."
         />
         <meta property="og:image" content="/inside_opengraph.png" />
-      </Head>
+      </Head> */}
 
       <div className={`w-screen relative`}>
         <div
