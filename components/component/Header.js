@@ -46,7 +46,7 @@ function Header(props) {
     <div
       className={` ${
         whiteBackground ? 'bg-white shadow-header' : 'bg-transparent'
-      } ${loaded ? 'opacity-100' : 'opacity-0'} relative `}
+      }  relative `}
     >
       {context.isWide && (
         <div
